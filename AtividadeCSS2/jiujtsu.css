@@ -1,0 +1,30 @@
+body {
+    
+    background-color: rgb(0, 0, 0);
+  }
+  h1 {
+    color: white;
+  }
+  p {
+    text-align:justify;
+    color: white;
+    padding: 30px;
+  }
+
+
+  a{ 
+      color: brown;
+  }
+
+  .paragrafo {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 20px;
+    padding: 20px;
+  }
+
+  #titulos {
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+  } 
