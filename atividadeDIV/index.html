@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Exemplo de Posicionamento com DIV</title>
+  <style>
+    body {
+      height: 2000px;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      margin: 20px;
+    }
+
+    .box {
+      width: 200px;
+      height: 100px;
+      margin-bottom: 30px;
+      padding: 10px;
+      color: white;
+      font-weight: bold;
+      text-align: center;
+      line-height: 100px;
+    }
+
+    .static {
+      position: static;
+      background-color: steelblue;
+    }
+
+    .relative {
+      position: relative;
+      top: 20px;
+      left: 20px;
+      background-color: darkorange;
+    }
+
+    .absolute-wrapper {
+      position: relative;
+      height: 150px;
+      background-color: #eee;
+      margin-bottom: 50px;
+    }
+
+    .absolute {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background-color: crimson;
+    }
+
+    .fixed {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      width: 150px;
+      height: 60px;
+      line-height: 60px;
+      background-color: darkgreen;
+      z-index: 1000;
+    }
+
+    .sticky-container {
+      height: 400px;
+      margin-bottom: 50px;
+      background-color: #f9f9f9;
+    }
+
+    .sticky {
+      position: sticky;
+      top: 0;
+      background-color: purple;
+    }
+
+    .centralizada {
+      margin: 0 auto;
+      background-color: teal;
+    }
+
+    .float-left {
+      float: left;
+      background-color: navy;
+    }
+
+    .float-right {
+      float: right;
+      background-color: maroon;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="box static">Posição: Static</div>
+
+    <div class="box relative">Posição: Relative</div>
+
+    <div class="absolute-wrapper">
+      <div class="box absolute">Posição: Absolute</div>
+    </div>
+
+    <div class="box fixed">Posição: Fixed</div>
+
+    <div class="sticky-container">
+      <div class="box sticky">Posição: Sticky (role a página)</div>
+    </div>
+
+    <div class="box centralizada">Posição: Centralizada</div>
+
+    <div style="overflow: auto; margin-bottom: 50px;">
+      <div class="box float-left">Float Left</div>
+      <div class="box float-right">Float Right</div>
+    </div>
+  </div>
+
+</body>
+</html>
+
