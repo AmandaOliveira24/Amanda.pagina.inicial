@@ -1,47 +1,133 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário Médico</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f9f9;
+      padding: 20px;
+    }
+
+    .form-container {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="date"],
+    input[type="password"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .checkbox-group,
+    .radio-group {
+      margin-top: 10px;
+    }
+
+    .form-buttons {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    input[type="submit"],
+    input[type="reset"] {
+      padding: 10px 20px;
+      margin: 5px;
+      border: none;
+      border-radius: 4px;
+      background-color: #4caf50;
+      color: white;
+      cursor: pointer;
+    }
+
+    input[type="reset"] {
+      background-color: #f44336;
+    }
+
+    input[type="submit"]:hover,
+    input[type="reset"]:hover {
+      opacity: 0.9;
+    }
+  </style>
 </head>
 <body>
+
+  <div class="form-container">
+    <h2>Ficha Médica do Paciente</h2>
     <form>
-        <label for="fname">First name:</label><br>
-        <input type="text" name="fname"><br>
-        <label for="lname">Last name:</label><br>
-        <input type="text" name="lname"><br>
+      <label for="fname">Nome:</label>
+      <input type="text" id="fname" name="fname" required>
 
-        <label for="username">Username:</label><br>
-        <input type="text" name="username"><br>
-        <label for="pwd">Password:</label><br>
-        <input type="password" name="pwd"><br>
+      <label for="lname">Sobrenome:</label>
+      <input type="text" id="lname" name="lname" required>
 
-        <input type="radio" name="fav_language" value="HTML">
-        <label for="html">homem</label><br>
-        <input type="radio" name="fav_language" value="CSS">
-        <label for="css">mulher</label><br>
-        <input type="radio" name="fav_language" value="JavaScript">
-        <label for="javascript">outro</label>
+      <label for="birthdate">Data de Nascimento:</label>
+      <input type="date" id="birthdate" name="birthdate" required>
 
-        <input type="checkbox" name="vehicle1" value="Bike">
-        <label for="vehicle1"> miopia</label><br>
-        <input type="checkbox" name="vehicle2" value="Car">
-        <label for="vehicle2"> astigmatismo</label><br>
-        <input type="checkbox"  name="vehicle3" value="Boat">
-        <label for="vehicle3"> problemas respiratórios</label><br>
-        <input type="checkbox"  name="vehicle3" value="Boat">
-        <label for="vehicle3"> problemas cardíacos</label><br>
-        <input type="checkbox"  name="vehicle3" value="Boat">
-        <label for="vehicle3"> Problemas psicológicos</label>
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required>
 
-       <br> <input type="reset" value="Reset">
+      <label for="password">Senha:</label>
+      <input type="password" id="password" name="password">
 
+      <label>Sexo:</label>
+      <div class="radio-group">
+        <input type="radio" id="male" name="gender" value="masculino">
+        <label for="male">Masculino</label><br>
+        <input type="radio" id="female" name="gender" value="feminino">
+        <label for="female">Feminino</label><br>
+        <input type="radio" id="other" name="gender" value="outro">
+        <label for="other">Outro</label>
+      </div>
 
-       <br> <input type="submit" value="Submit">
-      </form>
+      <label>Condições de Saúde:</label>
+      <div class="checkbox-group">
+        <input type="checkbox" id="miopia" name="conditions" value="miopia">
+        <label for="miopia">Miopia</label><br>
+        <input type="checkbox" id="astigmatismo" name="conditions" value="astigmatismo">
+        <label for="astigmatismo">Astigmatismo</label><br>
+        <input type="checkbox" id="respiratorio" name="conditions" value="respiratorio">
+        <label for="respiratorio">Problemas respiratórios</label><br>
+        <input type="checkbox" id="cardiaco" name="conditions" value="cardiaco">
+        <label for="cardiaco">Problemas cardíacos</label><br>
+        <input type="checkbox" id="psicologico" name="conditions" value="psicologico">
+        <label for="psicologico">Problemas psicológicos</label>
+      </div>
 
+      <label for="obs">Observações:</label>
+      <textarea id="obs" name="obs" rows="4" placeholder="Descreva sintomas, histórico médico etc."></textarea>
 
+      <div class="form-buttons">
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpar">
+      </div>
+    </form>
+  </div>
 
 </body>
 </html>
